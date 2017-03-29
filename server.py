@@ -9,8 +9,8 @@ class TestEndpoint(object):
         print("I am testing endpoint of server")
         print arg
 
-# transport = msg.get_transport(cfg.CONF)
-# cfg.CONF(['--config-file,' 'msg.conf'])
+# Authenticating with msg.conf
+cfg.CONF(['--config-file', 'msg.conf'])
 
 # Create Messaging Transport
 transport = msg.get_transport(cfg.CONF)
