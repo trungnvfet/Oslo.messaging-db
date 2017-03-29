@@ -13,6 +13,9 @@ class TestClient(object):
         # Cast for fanout
         cctxt.cast(ctxt={}, method='test', arg='Testing with fanout --- Just for Fun')
 
+# Authenticating with msg.conf
+cfg.CONF(['--config-file', 'msg.conf'])
+
 # Create Messaging Transport
 transport = msg.get_transport(cfg.CONF)
 
