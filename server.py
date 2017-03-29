@@ -9,8 +9,12 @@ class TestEndpoint(object):
         print("I am testing endpoint of server")
         print arg
 
+# transport = msg.get_transport(cfg.CONF)
+# cfg.CONF(['--config-file,' 'msg.conf'])
+
 # Create Messaging Transport
 transport = msg.get_transport(cfg.CONF)
+
 
 # Create Target
 target = msg.Target(topic='trungnv', server='127.0.0.1')
