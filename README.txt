@@ -1,14 +1,10 @@
 # create environement:
 
 $ virtualenv <NameOfProject>
-
 $ . <NameOfProject>/bin/activate
 $ pip install --upgrade pip # to be sure, pip is able to manage wheel
 $ pip install --upgrade setuptools # for entry point discovery
 $ pip install oslo.messaging
-
-
-
 
 
 # Reference.

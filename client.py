@@ -12,16 +12,16 @@ class TestClient(object):
         cctxt = self._client.prepare(namespace='control', version='2.0')
         # Call
         cctxt.call(ctxt={}, method='test', arg='alo. My name is Trung')
-        # Cast an fanout
+        # Cast
         cctxt.cast(ctxt={}, method='test', arg='Just for Fun')
 
+# Authenticating with msg.conf
+cfg.CONF(['--config-file', 'msg.conf'])
 # Create Messaging Transport
 transport = msg.get_transport(cfg.CONF)
 # Create Target
 target = msg.Target(topic='trungnv')
 
-# Create Target and set fanout=True
-target = msg.Target(topic='trungnv', fanout=True)
 
 # Create RPC client
 client = TestClient(transport, target)
